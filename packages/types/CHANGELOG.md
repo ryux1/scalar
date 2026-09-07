@@ -1,5 +1,11 @@
 # @scalar/types
 
+## 0.19.1
+
+### Patch Changes
+
+- [#10081](https://github.com/scalar/scalar/pull/10081): Keep the `mutualTLS` security scheme type instead of turning it into an apiKey form, and show read-only authentication guidance for mutual TLS and unsupported browser broker credentials.
+
 ## 0.19.0
 
 ### Minor Changes

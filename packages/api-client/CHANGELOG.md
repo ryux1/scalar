@@ -1,5 +1,13 @@
 # @scalar/api-client
 
+## 3.18.1
+
+### Patch Changes
+
+- [#10086](https://github.com/scalar/scalar/pull/10086): Enable optional query parameters when their value is entered.
+- [#10080](https://github.com/scalar/scalar/pull/10080): Fix the Test Request body showing schema defaults instead of the example on first open. This happened for the first operation when its body used oneOf/anyOf and had a named example.
+- [#10081](https://github.com/scalar/scalar/pull/10081): Keep the `mutualTLS` security scheme type instead of turning it into an apiKey form, and show read-only authentication guidance for mutual TLS and unsupported browser broker credentials.
+
 ## 3.18.0
 
 ### Minor Changes

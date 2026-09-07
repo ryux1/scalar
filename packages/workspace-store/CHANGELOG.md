@@ -1,5 +1,12 @@
 # @scalar/workspace-store
 
+## 0.60.1
+
+### Patch Changes
+
+- [#10068](https://github.com/scalar/scalar/pull/10068): Generate a proper UUID example for version-specific uuid formats (uuid1, uuid3, uuid4, uuid5), so documents from FastAPI/Pydantic get a UUID example instead of an empty one.
+- [#10081](https://github.com/scalar/scalar/pull/10081): Keep the `mutualTLS` security scheme type instead of turning it into an apiKey form, and show read-only authentication guidance for mutual TLS and unsupported browser broker credentials.
+
 ## 0.60.0
 
 ### Minor Changes
