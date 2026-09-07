@@ -260,3 +260,7 @@ export default function References() {
   )
 }
 ```
+
+## Application recipes
+
+See [authentication, preview deployments, base paths, and request-specific configuration](./nextjs-application-recipes.md).
