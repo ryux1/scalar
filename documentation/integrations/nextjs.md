@@ -260,3 +260,24 @@ export default function References() {
   )
 }
 ```
+
+## Request-specific configuration
+
+Pass a function when the browser configuration depends on the incoming request. The function runs for each request and may return a promise. Configuration errors propagate to Next.js.
+
+```typescript
+// app/scalar/route.ts
+import { ApiReference } from '@scalar/nextjs-api-reference'
+
+export const GET = ApiReference(
+  (request) => ({
+    url: '/openapi.json',
+    nonce: request.headers.get('x-nonce') ?? undefined,
+  }),
+  { headers: { 'Cache-Control': 'private, no-store' } },
+)
+```
+
+Generate the nonce in your trusted Proxy or middleware and set the matching CSP response header, as described above. Configuration is sent to the browser, so do not include server secrets. Additional response headers can be supplied as a `Headers` object, header tuples, or a record. The handler always sets the HTML content type.
+
+The package exports `ApiReferenceConfiguration`, `ApiReferenceConfigurationFactory`, and `ApiReferenceOptions` for typed configuration helpers. Static configuration still returns a synchronous handler; a configuration function returns an asynchronous handler that requires a `Request`.
