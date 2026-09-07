@@ -47,7 +47,7 @@ import document from '../../openapi.json'
 export const GET = ApiReference({ content: document })
 ```
 
-In this example, the JSON file is `app/openapi.json`. Its contents are included in the response sent to the browser.
+In this example, the JSON file is `openapi.json` at the project root. Its contents are included in the response sent to the browser.
 
 The standalone reference has its own HTML document. Your `app/layout.tsx`, React providers, global CSS, and Next.js metadata do not apply to it. Use `pageTitle`, `theme`, and `customCss` from the [configuration](../configuration.md) to customize it.
 
